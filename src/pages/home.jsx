@@ -46,12 +46,12 @@ export default function Home() {
           I build fast, scalable, and user-friendly applications that solve real
           business problems and help companies grow.
         </p>
-        <a
-          href="#contact"
+        <Link
+          to="/contact"
           className="inline-block mt-6 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold"
         >
           Let’s work together
-        </a>
+        </Link>
       </section>
 
       {/* ABOUT */}
@@ -111,7 +111,7 @@ export default function Home() {
         </p>
         <div className="flex justify-center gap-6 text-3xl text-teal-400">
           <a
-            href="mailto:youremail@example.com"
+            href="mailto:stajohn697@gmail.com"
             title="Email"
             className="hover:text-teal-200"
           >
@@ -127,13 +127,40 @@ export default function Home() {
             <i className="fab fa-linkedin"></i>
           </a>
           <a
-            href="https://github.com/starnoh"
+            href="https://github.com/Starnoh254"
             target="_blank"
             rel="noreferrer"
             title="GitHub"
             className="hover:text-teal-200"
           >
             <i className="fab fa-github"></i>
+          </a>
+          <a
+            href="https://instagram.com/Starnoh254"
+            target="_blank"
+            rel="noreferrer"
+            title="Instagram"
+            className="hover:text-teal-200"
+          >
+            <i className="fab fa-instagram"></i>
+          </a>
+          <a
+            href="https://x.com/Starnoh254"
+            target="_blank"
+            rel="noreferrer"
+            title="Twitter"
+            className="hover:text-teal-200"
+          >
+            <i className="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://wa.me/254714296170"
+            target="_blank"
+            rel="noreferrer"
+            title="WhatsApp"
+            className="hover:text-teal-200"
+          >
+            <i className="fab fa-whatsapp"></i>
           </a>
         </div>
       </section>
