@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/NavBarTemp";
+import NavBar from "./components/navbar";
 import Home from "./pages/home";
-import Contact from "./pages/Contact";
-import Projects from "./pages/Projects";
+import Contact from "./pages/contact";
+import Projects from "./pages/projects";
 
 function App() {
   return (
     <>
       <Router>
-      <Navbar />
+      <NavBar />
         {/* Push content down so it's not hidden behind fixed navbar */}
         <div className="mt-16">
           <Routes>
