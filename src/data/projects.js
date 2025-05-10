@@ -20,7 +20,7 @@ export const projects = [
         value:
             "Empowers informal workers, streamlines operations, and supports environmental goals.",
         status: "Delivered",
-        testimonial: "He handled full-stack roles, backend logic, and deployment like a pro.",
+        testimonial: "I didn't have to stress about the technical stuff—he handled it professionally and efficiently. I’d highly recommend him to any business owner looking for reliable tech support.",
         client: "Lead Dev, Kenawapwa"
     },
     {
@@ -34,5 +34,17 @@ export const projects = [
         status: "Delivered",
         testimonial: "Starnoh took ownership and delivered even when the team was down. Super dependable dev!",
         client: "Co-founder, Linkarp"
+    },
+    {
+        title: "Omar Modern Carpets",
+        description:
+            "Omar Modern Carpets is an online store that offers a wide range of stylish and high-quality carpets for modern homes. The platform allows customers to easily browse, choose, and order carpets with doorstep delivery.",
+        tech: ["React", "Node.js", "Vite"],
+        role: "Frontend Dev",
+        value:
+            "This website increased the business's online visibility, attracted more customer inquiries, and streamlined the buying process. As a result, the owner started receiving more orders and was able to serve clients beyond their physical location.",
+        status: "Delivered",
+        testimonial: "Working with Starnoh was a game changer for my business. He quickly understood what I needed, moved my website to a new server, and made sure everything was working smoothly with the new domain.",
+        client: "Hany Matar , CEO & Director"
     },
 ];

@@ -8,7 +8,11 @@ export default function NavBar() {
   return (
     <nav className="bg-gray-900 text-teal-400 w-full px-6 py-4 fixed top-0 z-50 shadow-md">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        <h1 className="font-heading font-bold text-2xl">Starnoh</h1>
+        <h1 className="font-heading font-bold text-2xl">
+          <Link to="/">
+            Starnoh
+          </Link>
+        </h1>
 
         {/* Desktop nav */}
         <ul className="hidden md:flex gap-8 font-heading list-none">
@@ -84,6 +88,3 @@ export default function NavBar() {
     </nav>
   );
 }
-
-
-
