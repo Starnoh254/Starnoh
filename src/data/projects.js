@@ -9,7 +9,8 @@ export const projects = [
             "Delivers engaging learning experiences and improves user retention through gamification.",
         status: "Ongoing",
         testimonial: "He handled full-stack roles, backend logic, and deployment like a pro.",
-        client: "Lead Dev, JengaAI"
+        client: "Lead Dev, JengaAI",
+        link: "https://jengaedu.com/"
     },
     {
         title: "Kenawapwa",
@@ -21,7 +22,8 @@ export const projects = [
             "Empowers informal workers, streamlines operations, and supports environmental goals.",
         status: "Delivered",
         testimonial: "I didn't have to stress about the technical stuff—he handled it professionally and efficiently. I’d highly recommend him to any business owner looking for reliable tech support.",
-        client: "Lead Dev, Kenawapwa"
+        client: "Lead Dev, Kenawapwa",
+        link: "https://kenwpwa.co.ke/"
     },
     {
         title: "Linkarp",
@@ -33,7 +35,8 @@ export const projects = [
             "Improves user engagement and networking outcomes at professional events.",
         status: "Delivered",
         testimonial: "Starnoh took ownership and delivered even when the team was down. Super dependable dev!",
-        client: "Co-founder, Linkarp"
+        client: "Co-founder, Linkarp",
+        link: "https://www.linkarp.com"
     },
     {
         title: "Omar Modern Carpets",
@@ -45,6 +48,7 @@ export const projects = [
             "This website increased the business's online visibility, attracted more customer inquiries, and streamlined the buying process. As a result, the owner started receiving more orders and was able to serve clients beyond their physical location.",
         status: "Delivered",
         testimonial: "Working with Starnoh was a game changer for my business. He quickly understood what I needed, moved my website to a new server, and made sure everything was working smoothly with the new domain.",
-        client: "Hany Matar , CEO & Director"
+        client: "Hany Matar , CEO & Director",
+        link: "https://omar-carpets.vercel.app/"
     },
 ];
