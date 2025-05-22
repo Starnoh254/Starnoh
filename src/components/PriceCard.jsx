@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import { FiCheck } from "react-icons/fi";
 
 export default function PriceCard({ name, price, features, popular }) {
   const cardRef = useRef(null);
@@ -30,7 +31,7 @@ export default function PriceCard({ name, price, features, popular }) {
       <ul className="mb-6 space-y-2 text-gray-300">
         {features.map((feature, i) => (
           <li key={i} className="flex items-center gap-2">
-            ✅ {feature}
+            <FiCheck className="text-teal-400" /> {feature}
           </li>
         ))}
       </ul>
