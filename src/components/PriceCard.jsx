@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export default function PriceCard({ name, price, features, popular }) {
   const cardRef = useRef(null);
@@ -35,7 +36,7 @@ export default function PriceCard({ name, price, features, popular }) {
       </ul>
 
       <button className="w-full text-white py-2 rounded-xl bg-teal-600 hover:bg-teal-700 transition">
-        Get This Package
+        <Link to="/contact">Get This Package</Link>
       </button>
     </div>
   );
