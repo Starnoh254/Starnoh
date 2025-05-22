@@ -5,6 +5,8 @@ import NavBar from "./components/NavBarTemp";
 import Home from "./pages/home";
 import Contact from "./pages/contact";
 import Projects from "./pages/projects";
+import Blog from "./pages/blog";
+import Pricing from "./pages/Pricing";
 
 function App() {
   return (
@@ -17,6 +19,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/pricing" element={<Pricing />} />
           </Routes>
         </div>
       </Router>

@@ -9,9 +9,7 @@ export default function NavBar() {
     <nav className="bg-gray-900 text-teal-400 w-full px-6 py-4 fixed top-0 z-50 shadow-md">
       <div className="flex justify-between items-center max-w-7xl mx-auto">
         <h1 className="font-heading font-bold text-2xl">
-          <Link to="/">
-            Starnoh
-          </Link>
+          <Link to="/">Starnoh</Link>
         </h1>
 
         {/* Desktop nav */}
@@ -35,6 +33,23 @@ export default function NavBar() {
               className="hover:text-indigo-400 transition-colors"
             >
               Contact Me
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/blog"
+              className="hover:text-indigo-400 transition-colors"
+            >
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/pricing"
+              onClick={() => setIsOpen((prev) => !prev)}
+              className="hover:text-indigo-400 transition-colors"
+            >
+              Pricing
             </Link>
           </li>
         </ul>
@@ -82,6 +97,24 @@ export default function NavBar() {
             className="hover:text-indigo-400 transition-colors block"
           >
             Contact Me
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/blog"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="hover:text-indigo-400 transition-colors"
+          >
+            Blog
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/pricing"
+            onClick={() => setIsOpen((prev) => !prev)}
+            className="hover:text-indigo-400 transition-colors"
+          >
+            Pricing
           </Link>
         </li>
       </ul>
