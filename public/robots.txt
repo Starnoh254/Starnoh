@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://starnohdev.com/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Disallow admin areas (if any)
+# Disallow: /admin/
+# Disallow: /private/
+
+# Allow all important pages
+Allow: /
+Allow: /projects
+Allow: /contact
+Allow: /blog
+Allow: /pricing

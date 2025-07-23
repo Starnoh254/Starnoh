@@ -10,11 +10,15 @@ export default function BlogCard({ title, date, description, tags, slug }) {
       </p>
 
       <div className="flex flex-wrap gap-2 mt-3">
-        {tags.map((stack, i) => (
-          <span key={i} className="bg-teal-700 px-3 py-1 rounded-full text-sm">
-            {stack}
-          </span>
-        ))}
+        {Array.isArray(tags) &&
+          tags?.map((stack, i) => (
+            <span
+              key={i}
+              className="bg-teal-700 px-3 py-1 rounded-full text-sm"
+            >
+              {stack}
+            </span>
+          ))}
       </div>
 
       {/* Add Read More link only if slug is passed */}

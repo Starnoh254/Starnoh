@@ -1,4 +1,10 @@
 import React from "react";
+import SEOHelmet from "../components/SEOHelmet";
+import {
+  personSchema,
+  professionalServiceSchema,
+  websiteSchema,
+} from "../utils/seoConfig";
 import ProjectCard from "../components/ProjectCard"; // Adjust path based on your file structure
 import { Link } from "react-router-dom";
 
@@ -32,138 +38,156 @@ const featuredProjects = [
 ];
 
 export default function Home() {
+  // Combined schema for the homepage
+  const homePageSchema = {
+    "@context": "https://schema.org",
+    "@graph": [personSchema, professionalServiceSchema, websiteSchema],
+  };
+
   return (
-    <div className="bg-gray-900 text-teal-400 w-full min-h-screen px-6 md:px-16 py-12">
-      {/* HERO */}
-      <section className="mb-12">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-100 font-heading">
-          Hi, I’m <span className="text-teal-400">Starnoh John</span> 👋
-        </h1>
-        <p className="text-2xl text-gray-300 mt-4 font-body">
-          Software Developer | Problem Solver | Business-focused Tech Builder
-        </p>
-        <p className="mt-6 text-lg text-gray-200">
-          I build fast, scalable, and user-friendly applications that solve real
-          business problems and help companies grow.
-        </p>
-        <Link
-          to="/contact"
-          className="inline-block mt-6 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold"
-        >
-          Let’s work together
-        </Link>
-      </section>
-
-      {/* ABOUT */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold mb-4 text-teal-400">About Me</h2>
-        <p className="text-gray-100">
-          I help businesses turn ideas into powerful, scalable digital
-          solutions. Whether it’s optimizing operations, creating
-          revenue-driving apps, or building websites that convert — I deliver
-          results that matter.
-        </p>
-        <ul className="list-disc ml-6 mt-4 text-gray-300">
-          <li>Improve customer satisfaction</li>
-          <li>Streamline operations</li>
-          <li>Boost sales and growth</li>
-          <li>Strengthen brand presence</li>
-        </ul>
-      </section>
-
-      {/* PROJECTS PREVIEW */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-teal-400 mb-6">
-          Featured Projects
-        </h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {featuredProjects.map((project, idx) => (
-            <ProjectCard key={idx} {...project} />
-          ))}
-        </div>
-        <Link
-          to="/projects"
-          className="mt-6 inline-block text-teal-300 underline hover:text-teal-100"
-        >
-          See all projects →
-        </Link>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="mb-12">
-        <h2 className="text-3xl font-bold text-teal-400 mb-6">
-          What People Say
-        </h2>
-        <div className="bg-gray-800 p-6 rounded-lg shadow">
-          <p className="italic text-gray-300">
-            "Starnoh was a game changer for our project. He’s fast, reliable,
-            and truly understands business needs."
+    <>
+      <SEOHelmet
+        title="Starnoh John - Software Developer & Problem Solver"
+        description="Expert software developer specializing in React, Node.js, and full-stack solutions. I build scalable applications that solve real business problems and help companies grow."
+        keywords="software developer, react developer, nodejs developer, fullstack developer, web development, business solutions, scalable applications, freelance developer, portfolio, JengaAI, Linkarp"
+        url="https://starnohdev.com"
+        type="website"
+        schema={homePageSchema}
+      />
+      <div className="bg-gray-900 text-teal-400 w-full min-h-screen px-6 md:px-16 py-12">
+        {/* HERO */}
+        <section className="mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-100 font-heading">
+            Hi, I’m <span className="text-teal-400">Starnoh John</span> 👋
+          </h1>
+          <p className="text-2xl text-gray-300 mt-4 font-body">
+            Software Developer | Problem Solver | Business-focused Tech Builder
           </p>
-          <p className="text-teal-400 mt-4 font-bold">— CEO, TechStart Co.</p>
-        </div>
-      </section>
+          <p className="mt-6 text-lg text-gray-200">
+            I build fast, scalable, and user-friendly applications that solve
+            real business problems and help companies grow.
+          </p>
+          <Link
+            to="/contact"
+            className="inline-block mt-6 bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-semibold"
+          >
+            Let’s work together
+          </Link>
+        </section>
 
-      {/* CONNECT */}
-      <section className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-teal-400 mb-4">Let’s Connect</h2>
-        <p className="text-gray-300 mb-4">
-          Want to chat or collaborate? Hit me up on any of these platforms:
-        </p>
-        <div className="flex justify-center gap-6 text-3xl text-teal-400">
-          <a
-            href="mailto:stajohn697@gmail.com"
-            title="Email"
-            className="hover:text-teal-200"
+        {/* ABOUT */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold mb-4 text-teal-400">About Me</h2>
+          <p className="text-gray-100">
+            I help businesses turn ideas into powerful, scalable digital
+            solutions. Whether it’s optimizing operations, creating
+            revenue-driving apps, or building websites that convert — I deliver
+            results that matter.
+          </p>
+          <ul className="list-disc ml-6 mt-4 text-gray-300">
+            <li>Improve customer satisfaction</li>
+            <li>Streamline operations</li>
+            <li>Boost sales and growth</li>
+            <li>Strengthen brand presence</li>
+          </ul>
+        </section>
+
+        {/* PROJECTS PREVIEW */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-teal-400 mb-6">
+            Featured Projects
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {featuredProjects.map((project, idx) => (
+              <ProjectCard key={idx} {...project} />
+            ))}
+          </div>
+          <Link
+            to="/projects"
+            className="mt-6 inline-block text-teal-300 underline hover:text-teal-100"
           >
-            <i className="fas fa-envelope"></i>
-          </a>
-          <a
-            href="https://linkedin.com/in/starnoh"
-            target="_blank"
-            rel="noreferrer"
-            title="LinkedIn"
-            className="hover:text-teal-200"
-          >
-            <i className="fab fa-linkedin"></i>
-          </a>
-          <a
-            href="https://github.com/Starnoh254"
-            target="_blank"
-            rel="noreferrer"
-            title="GitHub"
-            className="hover:text-teal-200"
-          >
-            <i className="fab fa-github"></i>
-          </a>
-          <a
-            href="https://instagram.com/Starnoh254"
-            target="_blank"
-            rel="noreferrer"
-            title="Instagram"
-            className="hover:text-teal-200"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-          <a
-            href="https://x.com/Starnoh254"
-            target="_blank"
-            rel="noreferrer"
-            title="Twitter"
-            className="hover:text-teal-200"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://wa.me/254714296170"
-            target="_blank"
-            rel="noreferrer"
-            title="WhatsApp"
-            className="hover:text-teal-200"
-          >
-            <i className="fab fa-whatsapp"></i>
-          </a>
-        </div>
-      </section>
-    </div>
+            See all projects →
+          </Link>
+        </section>
+
+        {/* TESTIMONIALS */}
+        <section className="mb-12">
+          <h2 className="text-3xl font-bold text-teal-400 mb-6">
+            What People Say
+          </h2>
+          <div className="bg-gray-800 p-6 rounded-lg shadow">
+            <p className="italic text-gray-300">
+              "Starnoh was a game changer for our project. He’s fast, reliable,
+              and truly understands business needs."
+            </p>
+            <p className="text-teal-400 mt-4 font-bold">— CEO, TechStart Co.</p>
+          </div>
+        </section>
+
+        {/* CONNECT */}
+        <section className="mt-16 text-center">
+          <h2 className="text-2xl font-bold text-teal-400 mb-4">
+            Let’s Connect
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Want to chat or collaborate? Hit me up on any of these platforms:
+          </p>
+          <div className="flex justify-center gap-6 text-3xl text-teal-400">
+            <a
+              href="mailto:stajohn697@gmail.com"
+              title="Email"
+              className="hover:text-teal-200"
+            >
+              <i className="fas fa-envelope"></i>
+            </a>
+            <a
+              href="https://linkedin.com/in/starnoh"
+              target="_blank"
+              rel="noreferrer"
+              title="LinkedIn"
+              className="hover:text-teal-200"
+            >
+              <i className="fab fa-linkedin"></i>
+            </a>
+            <a
+              href="https://github.com/Starnoh254"
+              target="_blank"
+              rel="noreferrer"
+              title="GitHub"
+              className="hover:text-teal-200"
+            >
+              <i className="fab fa-github"></i>
+            </a>
+            <a
+              href="https://instagram.com/Starnoh254"
+              target="_blank"
+              rel="noreferrer"
+              title="Instagram"
+              className="hover:text-teal-200"
+            >
+              <i className="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://x.com/Starnoh254"
+              target="_blank"
+              rel="noreferrer"
+              title="Twitter"
+              className="hover:text-teal-200"
+            >
+              <i className="fab fa-twitter"></i>
+            </a>
+            <a
+              href="https://wa.me/254714296170"
+              target="_blank"
+              rel="noreferrer"
+              title="WhatsApp"
+              className="hover:text-teal-200"
+            >
+              <i className="fab fa-whatsapp"></i>
+            </a>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
